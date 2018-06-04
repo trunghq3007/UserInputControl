@@ -1,69 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#8d8d8d"
-    tools:context=".ContentActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnSeekBar"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="btnSeekBarOnClick"
-        android:text="SeekBar"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/btnCheckBox"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnCheckBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="btnCheckBoxOnClick"
-        android:text="CheckBox"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/btnRadioButton"
-        app:layout_constraintTop_toBottomOf="@+id/btnSeekBar" />
+        <Button
+            android:id="@+id/btnSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnSeekBarOnClick"
+            android:text="SeekBar"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/btnCheckBox"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnRadioButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RadioButton"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/btnToogle"
-        app:layout_constraintTop_toBottomOf="@+id/btnCheckBox" />
+        <Button
+            android:id="@+id/btnCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnCheckBoxOnClick"
+            android:text="CheckBox"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/btnRadioButton"
+            app:layout_constraintTop_toBottomOf="@+id/btnSeekBar" />
 
-    <Button
-        android:id="@+id/btnToogle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="btnToogleOnClick"
-        android:text="Toogle"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/btnSpinner"
-        app:layout_constraintTop_toBottomOf="@+id/btnRadioButton" />
+        <Button
+            android:id="@+id/btnRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnRadioButtonOnclick"
+            android:text="RadioButton"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/btnToogle"
+            app:layout_constraintTop_toBottomOf="@+id/btnCheckBox" />
 
-    <Button
-        android:id="@+id/btnSpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="btnSpinnerOnClick"
-        android:text="Spinner"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/btnSwitch"
-        app:layout_constraintTop_toBottomOf="@+id/btnToogle" />
+        <Button
+            android:id="@+id/btnToogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnToogleOnClick"
+            android:text="Toogle"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/btnSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/btnRadioButton" />
 
-    <Button
-        android:id="@+id/btnSwitch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="btnSwitchOnclick"
-        android:text="Switch"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSpinner" />
+        <Button
+            android:id="@+id/btnSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnSpinnerOnClick"
+            android:text="Spinner"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/btnSwitch"
+            app:layout_constraintTop_toBottomOf="@+id/btnToogle" />
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/btnSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnSwitchOnclick"
+            android:text="Switch"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSpinner" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="openContent2Activity"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

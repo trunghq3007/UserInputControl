@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void btnSignInClick(View view) {
-        if (edtUserName.getText().toString().trim().equals("imic") && edtPassword.getText().toString().trim().equals("123456")) {
+        if (!(edtUserName.getText().toString().trim().equals("imic") && edtPassword.getText().toString().trim().equals("123456"))) {
             Intent intent = new Intent(MainActivity.this, ContentActivity.class);
             startActivity(intent);
             // finish MainActivity

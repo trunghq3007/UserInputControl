@@ -21,8 +21,14 @@
             android:name=".SeekbarActivity"
             android:label="@string/title_activity_seekbar"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ContentActivity"></activity>
-        <activity android:name=".CheckBox"></activity>
+        <activity android:name=".ContentActivity" />
+        <activity android:name=".CheckBox" />
+        <activity android:name=".RadioButtonActivity" />
+        <activity android:name=".ToogleActiviy" />
+        <activity android:name=".SwitchActivity" />
+        <activity android:name=".SpinnerActivity" />
+        <activity android:name=".Content2Activity" />
+        <activity android:name=".DatePickerActivity"></activity>
     </application>
 
 </manifest>

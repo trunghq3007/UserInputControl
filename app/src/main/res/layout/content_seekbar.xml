@@ -8,5 +8,16 @@
     tools:context=".SeekbarActivity"
     tools:showIn="@layout/activity_seekbar">
 
+    <SeekBar
+        android:id="@+id/simpleSeekBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
 
+        android:layout_marginTop="20dp"
+        android:max="200"
+        android:progress="60" />
+    <!--android:progressDrawable="@drawable/custom_seekbar"-->
+    <!--android:thumb="@drawable/thumb"-->
+    <!--android:background="@color/colorPrimaryDark"-->
+    <!--android:rotation="270"-->
 </LinearLayout>

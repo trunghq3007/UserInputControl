@@ -31,17 +31,28 @@ public class ContentActivity extends AppCompatActivity {
     }
 
     public void btnToogleOnClick(View view) {
+        startActivity(new ToogleActiviy());
     }
 
     public void btnSpinnerOnClick(View view) {
+        startActivity(new SpinnerActivity());
     }
 
     public void btnSwitchOnclick(View view) {
+        startActivity(new SwitchActivity());
     }
 
     private void startActivity(AppCompatActivity appCompatActivity) {
         // start activity
         Intent intent = new Intent(ContentActivity.this, appCompatActivity.getClass());
         startActivity(intent);
+    }
+
+    public void btnRadioButtonOnclick(View view) {
+        startActivity(new RadioButtonActivity());
+    }
+
+    public void openContent2Activity(View view) {
+        startActivity(new Content2Activity());
     }
 }
