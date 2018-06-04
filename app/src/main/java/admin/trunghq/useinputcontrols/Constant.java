@@ -1,0 +1,5 @@
+package admin.trunghq.useinputcontrols;
+
+public class Constant {
+    public static final int WAIT_TIME = 3000;
+}

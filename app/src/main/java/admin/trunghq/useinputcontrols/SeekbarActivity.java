@@ -16,14 +16,15 @@ public class SeekbarActivity extends AppCompatActivity {
         // perform seek bar change listener event used for getting the progress value
         simpleSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int progressChangedValue = 0;
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
 
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 progressChangedValue = progress;
             }
 
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
+
 
             public void onStopTrackingTouch(SeekBar seekBar) {
                 Toast.makeText(SeekbarActivity.this, "Seek bar progress is :" + progressChangedValue,

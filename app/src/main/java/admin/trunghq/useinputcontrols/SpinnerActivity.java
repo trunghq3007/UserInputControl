@@ -16,9 +16,13 @@ public class SpinnerActivity extends AppCompatActivity implements AdapterView.On
         setContentView(R.layout.activity_spinner);
         //Create	the	spinner.
         Spinner spinner = (Spinner) findViewById(R.id.label_spinner);
+
+
         if (spinner != null) {
-            spinner.setOnItemSelectedListener(SpinnerActivity.this);
+            spinner.setOnItemSelectedListener(this);
         }
+
+
         //Create	ArrayAdapter	using	the	string	array	and	default	spinner	layout.
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.labels_array, android.R.layout.simple_spinner_item);
         //Specify	the	layout	to	use	when	the	list	of	choices	appears.
@@ -30,6 +34,16 @@ public class SpinnerActivity extends AppCompatActivity implements AdapterView.On
         }
     }
 
+    /* @Override
+     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+     }
+
+     @Override
+     public void onNothingSelected(AdapterView<?> parent) {
+
+     }
+ */
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
         String spinner_item = adapterView.getItemAtPosition(position).toString();

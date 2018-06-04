@@ -15,11 +15,11 @@
         android:layout_height="100dp"
         android:layout_margin="10dp"
         android:src="@drawable/logo" />
-    <!--<ImageView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="10dp"
-        android:src="@drawable/logo" />-->
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:src="@drawable/logo" />-->
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -82,7 +82,7 @@
                 android:layout_toRightOf="@id/lb_password"
                 android:background="@drawable/border_eiditext"
                 android:ems="10"
-                android:inputType="textPassword"
+                android:inputType="numberPassword"
                 android:padding="6dp"
                 android:text="" />
 

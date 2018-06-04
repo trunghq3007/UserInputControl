@@ -5,7 +5,6 @@ import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -16,16 +15,18 @@ import java.util.Date;
 import java.util.Locale;
 
 public class DatePickerActivity extends AppCompatActivity {
-    Button btnChangeDate;
-    Button btnChangeTime;
+
     TextView txtDate;
     TextView txtTime;
     Calendar cal;
     Date date;
+
     // Sự kiện khi click vào nút changedate
     View.OnClickListener showDatePicker = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+
+
             DatePickerDialog.OnDateSetListener callback = new DatePickerDialog.OnDateSetListener() {
                 //Sự kiện khi click vào nút Done trên Dialog
                 @Override
@@ -33,10 +34,12 @@ public class DatePickerActivity extends AppCompatActivity {
                     // Set text cho textView
                     txtDate.setText(day + "/" + (month + 1) + "/" + year);
                     //Lưu vết lại ngày mới cập nhật
-                    cal.set(year, month, day);
-                    date = cal.getTime();
+                    //cal.set(year, month, day);
+                    //date = cal.getTime();
                 }
             };
+
+
             String s = txtDate.getText() + "";
             //Lấy ra chuỗi của textView Date
             String strArrtmp[] = s.split("/");
@@ -56,19 +59,8 @@ public class DatePickerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_date_picker);
-        SimpleDateFormat dft = null;
-       /* txtTime = (TextView) findViewById(R.id.txtTime);
-        btnChangeTime = (Button) findViewById(R.id.btnChangeTime);
-        btnChangeTime.setOnClickListener(showTimePicker);
-        //Định dạng giờ phút am/pm
-        dft = new SimpleDateFormat("hh:mm a", Locale.getDefault());
-        String strTime = dft.format(cal.getTime());
-        //đưa lên giao diện
-        txtTime.setText(strTime);
-        //lấy giờ theo 24 để lập trình theo Tag
-        dft = new SimpleDateFormat("HH:mm", Locale.getDefault());
-        txtTime.setTag(dft.format(cal.getTime()));*/
 
+        SimpleDateFormat dft = null;
         txtTime = (TextView) findViewById(R.id.txtTime);
         txtTime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,18 +68,25 @@ public class DatePickerActivity extends AppCompatActivity {
                 showTimePickerDialog();
             }
         });
-        btnChangeDate = (Button) findViewById(R.id.btnChangeDate);
+
+
+        // begin datepicker
+
         txtDate = (TextView) findViewById(R.id.txtDate);
-        btnChangeDate.setOnClickListener(showDatePicker);
+        txtDate.setOnClickListener(showDatePicker);
 
         //Set ngày giờ hiện tại khi mới chạy lần đầu
         cal = Calendar.getInstance();
 
         //Định dạng kiểu ngày / tháng /năm
         dft = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+
+
         String strDate = dft.format(cal.getTime());
         //hiển thị lên giao diện
         txtDate.setText(strDate);
+        //Intent intent = new Intent(get);
+        // startAc
     }
 
     /**
@@ -109,7 +108,7 @@ public class DatePickerActivity extends AppCompatActivity {
                 //lưu giờ thực vào tag
                 txtTime.setTag(s);
             }
-        }, hour, minute, true);
+        }, hour, minute, false);
         timePickerDialog.setTitle("Chọn thời gian");
         timePickerDialog.show();
     }

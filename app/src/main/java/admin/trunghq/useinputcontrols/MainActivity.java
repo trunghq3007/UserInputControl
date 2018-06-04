@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void btnSignInClick(View view) {
-        if (!(edtUserName.getText().toString().trim().equals("imic") && edtPassword.getText().toString().trim().equals("123456"))) {
+        if ((edtUserName.getText().toString().trim().equals("imic") && edtPassword.getText().toString().trim().equals("123456"))) {
             Intent intent = new Intent(MainActivity.this, ContentActivity.class);
             startActivity(intent);
             // finish MainActivity
@@ -40,11 +40,13 @@ public class MainActivity extends AppCompatActivity {
                 builder = new AlertDialog.Builder(this);
             }
             builder.setTitle("Access Denied")
-                    .setCancelable(false)
+                    .setCancelable(true)
                     .setMessage("Đăng nhập thất bại. Vui lòng đăng nhập lại")
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    .setPositiveButton("YESSSSS", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             // continue with delete
+
+                            ///
                         }
                     })
                     /*.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
@@ -52,8 +54,10 @@ public class MainActivity extends AppCompatActivity {
                             // do nothing
                         }
                     })*/
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .show();
+
+                    .show().setIcon(android.R.drawable.ic_dialog_alert);
         }
     }
+
+
 }

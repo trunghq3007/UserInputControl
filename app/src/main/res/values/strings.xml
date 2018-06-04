@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">UseInputControls</string>
     <string name="title_activity_seekbar">SeekbarActivity</string>
+
+
     <string-array name="labels_array">
         <item>Home</item>
         <item>Work</item>
