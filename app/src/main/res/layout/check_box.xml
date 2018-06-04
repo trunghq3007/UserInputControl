@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/checkbox1_chocolate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text1" />
+
+    <CheckBox
+        android:id="@+id/checkbox2_sprinkles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text2" />
+
+    <CheckBox
+        android:id="@+id/checkbox3_nuts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/btnSubmit"
+        android:layout_height="wrap_content"
+        android:onClick="onSubmit"
+        android:text="submit" />
+
+</LinearLayout>
