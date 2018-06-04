@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8d8d8d"
+    tools:context=".ContentActivity">
+
+    <Button
+        android:id="@+id/btnSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnSeekBarOnClick"
+        android:text="SeekBar"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnCheckBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnCheckBoxOnClick"
+        android:text="CheckBox"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnRadioButton"
+        app:layout_constraintTop_toBottomOf="@+id/btnSeekBar" />
+
+    <Button
+        android:id="@+id/btnRadioButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RadioButton"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnToogle"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheckBox" />
+
+    <Button
+        android:id="@+id/btnToogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnToogleOnClick"
+        android:text="Toogle"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/btnRadioButton" />
+
+    <Button
+        android:id="@+id/btnSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnSpinnerOnClick"
+        android:text="Spinner"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/btnToogle" />
+
+    <Button
+        android:id="@+id/btnSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnSwitchOnclick"
+        android:text="Switch"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSpinner" />
+
+</android.support.constraint.ConstraintLayout>

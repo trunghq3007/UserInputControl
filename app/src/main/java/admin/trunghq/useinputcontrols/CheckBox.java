@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 /**
  * @author Hà Quang Trung
@@ -18,30 +19,38 @@ import android.view.View;
  */
 public class CheckBox extends AppCompatActivity {
 
-    // HQT
-    /*CheckBox chocolate;
-    CheckBox sprinkles;
-    CheckBox nuts;
+
+    android.widget.CheckBox chocolate;
+    android.widget.CheckBox sprinkles;
+    android.widget.CheckBox nuts;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.check_box);
         chocolate = findViewById(R.id.checkbox1_chocolate);
-        findViewById(R.id.btnSubmit).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                StringBuffer toppings = new StringBuffer().append("hello");
-                if ((findViewById(R.id.checkbox1_chocolate)).is()) {
-                    toppings.append(getString(R.string.chocolate_syrup_text));
-                }
-                if (((CheckBox) findViewById(R.id.checkbox2_sprinkles)).isChecked()) {
-                    toppings.append(getString(R.string.sprinkles_text));
-                }
-                if (((CheckBox) findViewById(R.id.checkbox3_nuts)).isChecked()) {
-                    toppings.append(getString(R.string.crushed_nuts_text));
-                }
-            }
-        });
+        sprinkles = findViewById(R.id.checkbox2_sprinkles);
+        nuts = findViewById(R.id.checkbox3_nuts);
 
-    }*/
+
+    }
+
+    /**
+     * Btn submit onclick.
+     *
+     * @param view the view
+     */
+    public void btnSubmitOnclick(View view) {
+        StringBuffer toppings = new StringBuffer().append("Content: ");
+        if (chocolate.isChecked()) {
+            toppings.append("chocolate ");
+        }
+        if (sprinkles.isChecked()) {
+            toppings.append("sprinkles ");
+        }
+        if (nuts.isChecked()) {
+            toppings.append("nuts ");
+        }
+        Toast.makeText(this, toppings, Toast.LENGTH_SHORT).show();
+    }
 }

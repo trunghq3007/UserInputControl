@@ -7,25 +7,25 @@
         android:id="@+id/checkbox1_chocolate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text1" />
+        android:text="chocolate" />
 
     <CheckBox
         android:id="@+id/checkbox2_sprinkles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text2" />
+        android:text="sprinkles" />
 
     <CheckBox
         android:id="@+id/checkbox3_nuts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text2" />
+        android:text="nuts" />
 
     <Button
-        android:layout_width="wrap_content"
         android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onSubmit"
+        android:onClick="btnSubmitOnclick"
         android:text="submit" />
 
 </LinearLayout>
